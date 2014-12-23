@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>CREATE-NET XMAS TREE CONTROLLER</title>
+    <style type="text/css">
+
+
+        body 
+        {
+        background-image:url('http://www.clocktowerfriends.org/wp-content/uploads/2013/04/christmas-tree-icon.png');
+        background-size:512px 512px;
+        background-repeat:no-repeat;
+        }
+
+        #yutube {
+            position: absolute;
+            margin-top: 50px; 
+            left: 490px;
+        }
+
+        #lights {
+            position: absolute;
+            margin-top: 110px; 
+            left: 170px;
+        }
+
+        #lights2 {
+            position: absolute;
+            margin-top: 260px; 
+            left: 125px;
+        }
+
+        #lights3 {
+            position: absolute;
+            margin-top: 390px; 
+            left: 110px;
+        }
+
+        .onoffswitch {
+        position: relative; width: 104px;
+        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    }
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 20px;
+    }
+    .onoffswitch-inner {
+        display: block; width: 200%; margin-left: -100%;
+        -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+        -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 33px; padding: 0; line-height: 33px;
+        font-size: 18px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    .onoffswitch-inner:before {
+        content: "ON";
+        padding-left: 10px;
+        background-color: #34A7C1; color: #FFFFFF;
+    }
+    .onoffswitch-inner:after {
+        content: "OFF";
+        padding-right: 10px;
+        background-color: #EEEEEE; color: #999999;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block; width: 30px; margin: 1.5px;
+        background: #FFFFFF;
+        border: 2px solid #999999; border-radius: 20px;
+        position: absolute; top: 0; bottom: 0; right: 67px;
+        -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+        -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px; 
+    }
+
+
+    
+    .onoffswitch2 {
+        position: relative; width: 104px;
+        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    }
+    .onoffswitch2-checkbox {
+        display: none;
+    }
+    .onoffswitch2-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 20px;
+    }
+    .onoffswitch2-inner {
+        display: block; width: 200%; margin-left: -100%;
+        -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+        -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch2-inner:before, .onoffswitch2-inner:after {
+        display: block; float: left; width: 50%; height: 33px; padding: 0; line-height: 33px;
+        font-size: 18px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    .onoffswitch2-inner:before {
+        content: "ON";
+        padding-left: 10px;
+        background-color: #D42836; color: #FFFFFF;
+    }
+    .onoffswitch2-inner:after {
+        content: "OFF";
+        padding-right: 10px;
+        background-color: #EEEEEE; color: #999999;
+        text-align: right;
+    }
+    .onoffswitch2-switch {
+        display: block; width: 30px; margin: 1.5px;
+        background: #FFFFFF;
+        border: 2px solid #999999; border-radius: 20px;
+        position: absolute; top: 0; bottom: 0; right: 67px;
+        -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+        -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    }
+    .onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-inner {
+        margin-left: 0;
+    }
+    .onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-switch {
+        right: 0px; 
+    }
+
+
+
+    .onoffswitch3 {
+        position: relative; width: 104px;
+        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    }
+    .onoffswitch3-checkbox {
+        display: none;
+    }
+    .onoffswitch3-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 20px;
+    }
+    .onoffswitch3-inner {
+        display: block; width: 200%; margin-left: -100%;
+        -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+        -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch3-inner:before, .onoffswitch3-inner:after {
+        display: block; float: left; width: 50%; height: 33px; padding: 0; line-height: 33px;
+        font-size: 18px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    .onoffswitch3-inner:before {
+        content: "ON";
+        padding-left: 10px;
+        background-color: #E3E310; color: #FFFFFF;
+    }
+    .onoffswitch3-inner:after {
+        content: "OFF";
+        padding-right: 10px;
+        background-color: #EEEEEE; color: #999999;
+        text-align: right;
+    }
+    .onoffswitch3-switch {
+        display: block; width: 30px; margin: 1.5px;
+        background: #FFFFFF;
+        border: 2px solid #999999; border-radius: 20px;
+        position: absolute; top: 0; bottom: 0; right: 67px;
+        -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+        -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    }
+    .onoffswitch3-checkbox:checked + .onoffswitch3-label .onoffswitch3-inner {
+        margin-left: 0;
+    }
+    .onoffswitch3-checkbox:checked + .onoffswitch3-label .onoffswitch3-switch {
+        right: 0px; 
+    }
+       
+    
+</style>
+ <link rel="stylesheet" href="http://fabien-d.github.io/alertify.js/assets/js/lib/alertify/alertify.core.css" />
+ <link rel="stylesheet" href="http://fabien-d.github.io/alertify.js/assets/js/lib/alertify/alertify.default.css" id="toggleCSS" />
+<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://fabien-d.github.io/alertify.js/assets/js/lib/alertify/alertify.min.js"></script>
+
+<script type="text/javascript">
+
+var ws;
+
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    connectWS();
+    setImage();
+});
+
+
+function connectWS() {
+	if ("WebSocket" in window){
+		ws = new WebSocket("ws://193.206.22.104:8088");
+     	ws.onopen = function(){
+     		console.log("connected to server");
+
+		}
+
+		ws.onmessage = function (evt) 
+     	{ 
+     		console.log(evt.data);
+        var data = JSON.parse(evt.data);
+
+        if(data.light1 == "ON") {
+          document.getElementById("myonoffswitch").checked = true;
+          document.getElementById("lights").innerHTML = '<img src="christmas-tree-icon_1.png"/>';
+
+        }
+        if(data.light1 == "OFF") {
+          document.getElementById("myonoffswitch").checked = false;
+          document.getElementById("lights").innerHTML = '<img src="christmas-tree-icon_off.png"/>';
+        }
+        if(data.light2 == "ON") {
+          document.getElementById("myonoffswitch2").checked = true;
+          document.getElementById("lights2").innerHTML = '<img src="christmas-tree-icon_2.png"/>';
+
+        }
+        if(data.light2 == "OFF") {
+          document.getElementById("myonoffswitch2").checked = false;
+          document.getElementById("lights2").innerHTML = '<img src="christmas-tree-icon_off.png"/>';
+        }
+
+        if(data.light3 == "ON") {
+          document.getElementById("myonoffswitch3").checked = true;
+          document.getElementById("lights3").innerHTML = '<img src="christmas-tree-icon_3.png"/>';
+
+        }
+        if(data.light3 == "OFF") {
+          document.getElementById("myonoffswitch3").checked = false;
+          document.getElementById("lights3").innerHTML = '<img src="christmas-tree-icon_off.png"/>';
+        }
+     		
+       
+     	};
+     	ws.onclose = function()
+     	{ 
+        	// websocket is closed.
+        	console.log("Connection lost...reconnecting in 1''"); 
+        	setTimeout(connectWS(), 5000);
+     	};
+	}
+
+}
+
+function WebSocketSend(message)
+{
+  
+  ws.send(message);
+  
+
+}
+
+function setImage() {
+  document.getElementById("img").src = "image.jpg?" + new Date().getTime();
+  
+  setTimeout(setImage, 1000);
+  //console.log('updating image')
+
+}
+
+  function checkLights(){
+    console.log("reporting status..");
+    var c=document.getElementById('myonoffswitch');
+    var d=document.getElementById('myonoffswitch2');
+    var e=document.getElementById('myonoffswitch3');
+
+    var light1_stat, light2_stat, light3_stat;
+    if (c.checked) {
+      light1_stat = "ON";
+    }
+    else {
+      light1_stat = "OFF"
+    }
+
+    if (d.checked) {
+      light2_stat =  "ON";
+    }
+    else {
+      light2_stat  =  "OFF";
+    }
+
+    if (e.checked) {
+      light3_stat =  "ON";
+    }
+    else {
+      light3_stat  =  "OFF";
+    }
+
+    WebSocketSend('{"light1":"'+light1_stat+'", "light2":"'+light2_stat+'", "light3":"'+light3_stat+'"}')
+
+  }
+
+</script>
+
+</head>
+
+<body>
+
+
+
+  <div id="lights">
+ <!--   <img src="http://www.clocktowerfriends.org/wp-content/uploads/2013/04/christmas-tree-icon.png"/>-->
+  </div>
+  <div  id="lights2">
+ <!--   <img src="http://www.clocktowerfriends.org/wp-content/uploads/2013/04/christmas-tree-icon.png"/>-->
+  </div>
+  <div id="lights3">
+ <!--   <img src="http://www.clocktowerfriends.org/wp-content/uploads/2013/04/christmas-tree-icon.png"/>-->
+  </div>
+
+  <br />
+  <br />
+
+<table align = "center">
+  <tr><td>
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="checkLights();" checked >
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+</td>
+<td>
+<div class="onoffswitch2">
+    <input type="checkbox" name="onoffswitch2" class="onoffswitch2-checkbox" id="myonoffswitch2" onclick="checkLights();" checked >
+    <label class="onoffswitch2-label" for="myonoffswitch2">
+        <span class="onoffswitch2-inner"></span>
+        <span class="onoffswitch2-switch"></span>
+    </label>
+
+</td>
+
+<td>
+  <div class="onoffswitch3">
+    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" onclick="checkLights();" checked >
+    <label class="onoffswitch3-label" for="myonoffswitch3">
+        <span class="onoffswitch3-inner"></span>
+        <span class="onoffswitch3-switch"></span>
+    </label>
+</div>
+  </td>
+</tr>
+<tr>
+  <td>
+
+  </td>
+  </tr>
+</table>
+</div>
+
+<div id="yutube"> 
+  <!--<iframe width="560" height="315" src="http://www.youtube.com/embed/aULwLBeV4Dg" frameborder="0" allowfullscreen></iframe>-->
+  <img id="img" src="image.jpg" width="500" height ="375">
+  </div>
+
+</body>
+</html>
