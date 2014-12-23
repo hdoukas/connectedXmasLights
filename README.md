@@ -3,6 +3,8 @@ connectedXmasLights
 
 Implement controllable Xmas lights over the Web using WebSockets, an Arduino and a RaspberryPi.
 
+![alt tag](http://blog.buildinginternetofthings.com/wp-content/uploads/2014/12/Presentation11.jpg)
+
 Read about it [here].
 
 List of provided files:
